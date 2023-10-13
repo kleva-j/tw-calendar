@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsup src/index.ts --format cjs,esm --dts"
+    "dev": "vitest",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "kleva-j",
@@ -15,6 +16,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "tsup": "^7.2.0"
+    "tsup": "^7.2.0",
+    "vitest": "^0.34.6"
   }
 }
