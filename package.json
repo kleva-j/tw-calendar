@@ -1,23 +1,27 @@
 {
   "name": "tw-calendar",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vitest",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "test": "vitest run",
     "lint": "tsc",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build"
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run ci && changeset publish"
   },
   "keywords": [],
   "author": "kleva-j",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/node": "^20.8.5",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "tsup": "^7.2.0",
     "vitest": "^0.34.6"
   }
