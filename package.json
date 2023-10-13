@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vitest",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "lint": "tsc",
+    "ci": "pnpm run test && pnpm run build"
   },
   "keywords": [],
   "author": "kleva-j",
